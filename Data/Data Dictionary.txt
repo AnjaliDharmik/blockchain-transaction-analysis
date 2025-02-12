@@ -1,0 +1,25 @@
+Data Dictionary
+* type - Transaction Type
+* chainId - Identifies the blockchain network 
+* maxFeePerGas - Max gas fee per unit gas. Important for transaction prioritization.
+* maxPriorityFeePerGas - Max gas fee per unit gas prioritization.
+* value -  Amount of cryptocurrency transferred. Used for value-based clustering.
+* accessList - dict with address, storageKeys keys
+* r, s, v - Cryptographic signature components. Helps verify transaction authenticity.
+* hash -  Unique transaction ID. Used to match transactions across datasets.
+* blockNumber - Block height where the transaction was mined.
+* transactionIndex - Position of the transaction within the block.
+* blockHash - Hash of the block that includes the transaction. Only available after mining.
+* blobVersionedHashes - Relevant for future L2 scaling.
+* maxFeePerBlobGas - Related to EIP-4844 for blob transactions.
+* gasPrice - The price per unit of gas. Higher values lead to faster mining.
+* gas / gasLimit -  Total gas allocated for the transaction.
+* confirmations - Number of blocks confirming the transaction.
+
+* to - Recipient address. Can be used to cluster transactions by destination.
+* from - Sender’s address. Useful for clustering transactions by sender.
+* nonce - Sequence number for transactions from the same sender. Helps detect transaction replacement.
+* input / data - Contains smart contract call data. Used to distinguish contract interactions from simple transfers.
+* yParity - 
+* date - blockNumber folder name 
+* creates - Contract creation address. Helps identify smart contract deployments.
